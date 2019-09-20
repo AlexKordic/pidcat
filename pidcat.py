@@ -21,6 +21,11 @@ limitations under the License.
 # Piping detection and popen() added by other Android team members
 # Package filtering and output improvements by Jake Wharton, http://jakewharton.com
 
+import os
+if os.name == 'nt':
+  from colorama import init
+  init()
+
 import argparse
 import sys
 import re
